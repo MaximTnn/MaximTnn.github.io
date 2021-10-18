@@ -368,9 +368,13 @@ function preload(callback) {
 /*!**************************************!*\
   !*** ./src/js/components/shering.js ***!
   \**************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var html2canvas__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! html2canvas */ "./node_modules/html2canvas/dist/html2canvas.js");
+/* harmony import */ var html2canvas__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(html2canvas__WEBPACK_IMPORTED_MODULE_0__);
 /* 
 Social Share Links:
 WhatsApp:
@@ -384,6 +388,14 @@ https://pinterest.com/pin/create/bookmarklet/?media=[post-img]&url=[post-url]&is
 LinkedIn:
 https://www.linkedin.com/shareArticle?url=[post-url]&title=[post-title]
 */
+
+var img = '';
+html2canvas__WEBPACK_IMPORTED_MODULE_0___default()(document.querySelector("#cv")).then(function (canvas) {
+  // document.body.appendChild(canvas)
+  img = canvas;
+  console.log(img);
+  $('head').append("<meta property=\"og:image\" content=\"".concat(img, "\"/>"));
+});
 var facebookBtn = document.querySelector(".facebook-btn");
 var tgBtn = document.querySelector(".tg-btn");
 var vkBtn = document.querySelector(".vk-btn");
@@ -395,7 +407,7 @@ function init() {
 
   facebookBtn.setAttribute("href", "https://www.facebook.com/sharer.php?u=".concat(postUrl));
   tgBtn.setAttribute("href", "https://twitter.com/share?url=".concat(postUrl, "&text=").concat(postTitle));
-  vkBtn.setAttribute("href", "https://vk.com/share.php?&url=".concat(postUrl, "&?title=").concat(postTitle));
+  vkBtn.setAttribute("href", "https://vk.com/share.php?&url=".concat(postUrl, "&?title=").concat(postTitle, "&?image=").concat(img));
 }
 
 init();
@@ -682,7 +694,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_animationScroll__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/animationScroll */ "./src/js/components/animationScroll.js");
 /* harmony import */ var _components_preloader__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/preloader */ "./src/js/components/preloader.js");
 /* harmony import */ var _components_shering__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/shering */ "./src/js/components/shering.js");
-/* harmony import */ var _components_shering__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_components_shering__WEBPACK_IMPORTED_MODULE_12__);
 
 
 
