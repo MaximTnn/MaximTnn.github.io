@@ -347,7 +347,7 @@ function preload(callback) {
           }, 2000);
         }
 
-        $(".preloader__img").css("transform", "translate(".concat(progress * 3, "%, -").concat(progress * 2.5, "%)"));
+        $(".preloader__img").css("transform", "translate(".concat(progress * 4, "%, -").concat(progress * 2, "%)"));
       };
 
       dBody.css("overflow", "hidden");
@@ -368,13 +368,9 @@ function preload(callback) {
 /*!**************************************!*\
   !*** ./src/js/components/shering.js ***!
   \**************************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var html2canvas__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! html2canvas */ "./node_modules/html2canvas/dist/html2canvas.js");
-/* harmony import */ var html2canvas__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(html2canvas__WEBPACK_IMPORTED_MODULE_0__);
 /* 
 Social Share Links:
 WhatsApp:
@@ -388,14 +384,14 @@ https://pinterest.com/pin/create/bookmarklet/?media=[post-img]&url=[post-url]&is
 LinkedIn:
 https://www.linkedin.com/shareArticle?url=[post-url]&title=[post-title]
 */
+// import html2canvas from 'html2canvas';
+var img = ''; // html2canvas(document.querySelector("#cv")).then(canvas => {
+//     document.body.appendChild(canvas)
+//     img = encodeURI(canvas)
+//     console.log(img)
+//     $('head').append(`<meta property="og:image" content="${img}"/>`)
+// });
 
-var img = '';
-html2canvas__WEBPACK_IMPORTED_MODULE_0___default()(document.querySelector("#cv")).then(function (canvas) {
-  // document.body.appendChild(canvas)
-  img = canvas;
-  console.log(img);
-  $('head').append("<meta property=\"og:image\" content=\"".concat(img, "\"/>"));
-});
 var facebookBtn = document.querySelector(".facebook-btn");
 var tgBtn = document.querySelector(".tg-btn");
 var vkBtn = document.querySelector(".vk-btn");
@@ -403,7 +399,7 @@ var vkBtn = document.querySelector(".vk-btn");
 function init() {
   var pinterestImg = document.querySelector(".pinterest-img");
   var postUrl = encodeURI(document.location.href);
-  var postTitle = encodeURI("Hi everyone, please check this out: "); //   let postImg = encodeURI(pinterestImg.src);
+  var postTitle = encodeURI("Hi everyone, please check this out: "); // let postImg = encodeURI(pinterestImg.src);
 
   facebookBtn.setAttribute("href", "https://www.facebook.com/sharer.php?u=".concat(postUrl));
   tgBtn.setAttribute("href", "https://twitter.com/share?url=".concat(postUrl, "&text=").concat(postTitle));
@@ -694,6 +690,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_animationScroll__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/animationScroll */ "./src/js/components/animationScroll.js");
 /* harmony import */ var _components_preloader__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/preloader */ "./src/js/components/preloader.js");
 /* harmony import */ var _components_shering__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/shering */ "./src/js/components/shering.js");
+/* harmony import */ var _components_shering__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_components_shering__WEBPACK_IMPORTED_MODULE_12__);
 
 
 

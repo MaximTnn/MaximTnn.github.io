@@ -937,10 +937,13 @@ html.has-scroll-dragging {
     -webkit-font-feature-settings: "pnum" on, "lnum" on;
             font-feature-settings: "pnum" on, "lnum" on;
     width: 100vw;
-    height: auto;
+    height: 0;
     right: auto;
     padding: 0;
     margin-top: 0; }
+    .header .container {
+      padding: 0;
+      height: 0; }
     .header__menu {
       display: block;
       width: 100vw;
